@@ -41,6 +41,15 @@ select * from member_table;
 -- 아이디 비번 비교
 select * from member_table where m_id="" and m_password="";
 
-
-
+drop table board_table;
+create table board_table(
+	b_number bigint auto_increment,
+    b_writer varchar(20),
+    b_password varchar(20),
+    b_title varchar(20),
+    b_contentsl varchar(20),
+    b_date datetime,
+    constraint primary key(b_number)
+);
+select * from board_table;
 
