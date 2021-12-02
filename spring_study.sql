@@ -46,8 +46,9 @@ create table board_table(
 	b_number bigint auto_increment,
     b_writer varchar(20),
     b_password varchar(20),
-    b_title varchar(20),
-    b_contentsl varchar(20),
+    b_title varchar(50),
+    b_contents varchar(1000),
+    b_hits int default 0,
     b_date datetime,
     constraint primary key(b_number)
 );
