@@ -81,6 +81,81 @@ select * from board_table where b_title like '%안녕%';
 -- 내용에 안녕 이라는 단어가 포함된 결과를 출력하는 쿼리는?
 select * from board_table where b_contents like '%안녕%';
 
+-- 컬럼추가
+alter table board_table add b_filename varchar(100);
+
+create table comment_table(
+	c_number bigint auto_increment,
+    b_number bigint,
+    c_writer varchar(20),
+    c_contents varchar(200),
+    c_date datetime,
+    constraint primary key(c_number)
+);
+
+select * from comment_table;
+
+-- 11번 게시글에 대한 댓글 목록 조회
+select * from comment_table where b_number=11;
+
+use spring_study;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
